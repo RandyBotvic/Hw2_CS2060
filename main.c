@@ -1,8 +1,8 @@
 // Fig. 3.10: fig03_10.c
-// Analysis of examination results 
+// Analysis of examination results
 #include <stdio.h>
 
-// function main begins program execution 
+// function main begins program execution
 int main( void )
 {
     // initialize variables in definitions
@@ -16,9 +16,7 @@ int main( void )
     {
         // prompt user for input and obtain value from user
         printf( "%s", "Enter result ( 1=pass,2=fail ): " );
-        scanf( "%d", &result );
         int returnValue=scanf( "%d", &result );
-        while ((getchar())!='\n');
 
         // if result 1, increment passes
         if ( returnValue == 1 && result == 1)
@@ -31,11 +29,16 @@ int main( void )
             failures = failures + 1;
             student = student + 1;
         } // end else
-        else if (returnValue != 1)
+        else if (returnValue == 1)
         {
             puts("Please only enter prompted values!!");
         }
-         // increment student counter
+        else
+        {
+            while ((getchar())!='\n');
+            puts("Please only enter prompted values!!");
+        }
+        // increment student counter
     }while ( student <= 10 );// end while
 
     // termination phase; display number of passes and failures
@@ -47,23 +50,4 @@ int main( void )
     {
         puts( "Bonus to instructor!" );
     } // end if
-} // end function main 
-
-
-
-
-/**************************************************************************
- * (C) Copyright 1992-2013 by Deitel & Associates, Inc. and               *
- * Pearson Education, Inc. All Rights Reserved.                           *
- *                                                                        *
- * DISCLAIMER: The authors and publisher of this book have used their     *
- * best efforts in preparing the book. These efforts include the          *
- * development, research, and testing of the theories and programs        *
- * to determine their effectiveness. The authors and publisher make       *
- * no warranty of any kind, expressed or implied, with regard to these    *
- * programs or to the documentation contained in these books. The authors *
- * and publisher shall not be liable in any event for incidental or       *
- * consequential damages in connection with, or arising out of, the       *
- * furnishing, performance, or use of these programs.                     *
- *************************************************************************/
-
+} // end function main
