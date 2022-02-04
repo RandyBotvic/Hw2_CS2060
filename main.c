@@ -1,35 +1,15 @@
 #include <stdio.h>
-
-
-
-
-int main (void)
+void main()
 {
-
-    int startNumber;
-    int endNumber;
-    int sumOfOdds;
-
-    startNumber=0;
-    endNumber=0;
-    sumOfOdds=0;
-
-    printf( "%s", "Please enter starting number: ");
-    scanf("%d", &startNumber);
-
-    printf( "%s", "Please enter ending number: ");
-    scanf( "%d", &endNumber);
-
-
-
-    for (int i=startNumber; i<=endNumber; i++)
+    int i,sum=0;
+    // Modified code off the interwebs to
+    // get the hang of writing my first loops
+    // just being honest ;/
+    printf("\nThe odd numbers are :");
+    for(i=1;i<=8;i++)
     {
-        if(i%2==1)
-        {
-            sumOfOdds += i;
-        }
+        printf("%d ",2*i-1);
+        sum+=2*i-1;
     }
-
-    printf( "This is the sum of all the 0dd Numbers:  %d", sumOfOdds);
-    // Start of methods used.
-};
+    printf("\nThe Sum of odd Natural Number 1 through 15 : %d \n",sum);
+}
