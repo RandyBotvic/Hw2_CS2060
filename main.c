@@ -2,7 +2,9 @@
 void main()
 {
     int i,sum=0;
-
+    // Modified code off the interwebs to
+    // get the hang of writing my first loops
+    // just being honest ;/
     printf("\nThe odd numbers are :");
     for(i=1;i<=8;i++)
     {
